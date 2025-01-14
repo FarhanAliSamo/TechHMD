@@ -2,7 +2,11 @@ import React from "react";
 
 const ServiceSection = () => {
   return (
-    <div className="w-full px-[120px] my-5 mb-16">
+    <div className="w-full px-[120px] py-16 relative">
+
+      <img src="/assets/images/textures/blue-texture.png "  className='object-cover  w-full h-full absolute left-0 top-0 -z-10' alt="" />
+
+
       <h3 className="text-slate-900 text-xl text-center uppercase font-medium">Our Core Products</h3>
       
       <h2 className="text-slate-900 text-3xl text-center uppercase font-semibold">

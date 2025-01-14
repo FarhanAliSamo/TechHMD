@@ -10,7 +10,7 @@ const SecondaryBanner = () => {
         <div className="bg-[#3A3B62] opacity-70 w-full h-full absolute left-0 top-0 -z-10"></div>
         <img src="/assets/images/banners/banner-3.png" alt="" className="w-full h-full absolute left-0 top-0 object-cover object-top -z-20"/>
         
-        <img src="/assets/images/shapes/white-line-seprator.png" alt="" className="w-full absolute left-0 top-0"/>
+        <img src="/assets/images/shapes/white-line-seprator.png" alt="" className="w-full absolute left-0 top-0 filter"/>
         
          
             
