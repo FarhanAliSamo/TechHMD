@@ -1,8 +1,22 @@
+'use client'
+
+import { getHeroSectionByPageName } from '@/lib/api/home'
 import Button from '@/components/atoms/button'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Hero = () => {
 
+  const [data,setData] = useState<HeroData|null>(null)
+
+  const getHeroSectionData = async() =>{
+    const { data :{ data }}  = await getHeroSectionByPageName('home');
+    setData(data);   
+    console.log(data)
+  }
+
+  useEffect (()=>{
+    getHeroSectionData()
+  },[])
 
   return (
     <div className='h-screen w-full relative flex items-center '>

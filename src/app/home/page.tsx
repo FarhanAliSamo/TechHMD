@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import Hero from './hero'
 import AboutSection from './about-section'
@@ -10,6 +12,10 @@ import PortfolioSection from './portfolio-section'
 import Testimonialsection from './testimonial-section'
 
 const Home = () => {
+
+  
+  const test = process.env.NEXT_PUBLIC_API_BASE_URL;
+  console.log(test)
   return (
     <div>
       <Hero/>
