@@ -45,3 +45,25 @@ ul{
     --radius: 0.5rem;
   }
 }
+
+
+
+.mobile_nav{
+  display: none ;
+}
+
+@media (max-width: 700px) {
+  .web_nav{
+   height: 50px; 
+  }
+  .web_nav_ul,.web_nav_language_dropdown{
+    display: none;  
+  }
+  .mobile_nav{
+    display: block ;
+  }
+}
+
+.about_heading{
+  text-shadow: -10px -7px 2px #3a3b6259;
+}

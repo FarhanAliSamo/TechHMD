@@ -1,86 +1,252 @@
-.hexagon-gallery img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  transition: all .3s ease;
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./src/styles/hexagon.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./src/styles/hexagon.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./src/styles/hexagon.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+  .hexagon-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: all 0.3s ease;
+  }
+  
+  .hexagon-gallery {
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, -2fr);
+    grid-auto-rows: 127px;
+    grid-gap: 16px;
+    align-items: center;
+    justify-content: center;
 }
+  
+  .hex {
+    display: flex;
+    position: relative;
+    max-width: 175px;
+    height: 175px;
+    background-color: #424242;
+    -webkit-clip-path: polygon(
+      50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0% 75%,
+      0% 25%
+    );
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  
+  .hex:hover {
+    transform: scale(1.05);
+  }
+  .hex:hover img {
+    transform: scale(1.1);
+  }
+  
+  .hex:first-child {
+    grid-row-start: 1;
+    grid-column: 2 / span 2;
+  }
+  
+  .hex:nth-child(2) {
+    grid-row-start: 1;
+    grid-column: 4 / span 2;
+  }
+  
+  .hex:nth-child(3) {
+    grid-row-start: 1;
+    grid-column: 6 / span 2;
+  }
+  
+  .hex:nth-child(4) {
+    grid-row-start: 2;
+    grid-column: 1 / span 2;
+  }
+  
+  .hex:nth-child(5) {
+    grid-row-start: 2;
+    grid-column: 3 / span 2;
+  }
+  
+  .hex:nth-child(6) {
+    grid-row-start: 2;
+    grid-column: 5 / span 2;
+  }
+  
+  .hex:nth-child(7) {
+    grid-row-start: 2;
+    grid-column: 7 / span 2;
+  }
+  
+  .hex:nth-child(8) {
+    grid-row-start: 3;
+    grid-column: 2 / span 2;
+  }
+  
+  .hex:nth-child(9) {
+    grid-row-start: 3;
+    grid-column: 4 / span 2;
+  }
+  
+  .hex:nth-child(10) {
+    grid-row-start: 3;
+    grid-column: 6 / span 2;
+  }
+  
+  @media (max-width: 991px) {
+    .hexagon-gallery {
+      margin: auto;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-auto-rows: 139px;
+      grid-gap: 23px;
+    }
+  
+    .hex {
+      display: flex;
+      position: relative;
+      max-width: 240px;
+      height: 180px;
+      background-color: #424242;
+      -webkit-clip-path: polygon(
+        50% 0%,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        0% 75%,
+        0% 25%
+      );
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+  }
+  @media (max-width: 768px) {
+    .hexagon-gallery {
+      margin: auto;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-auto-rows: 120px;
+      grid-gap: 16px;
+    }
+  
+    .hex {
+      display: flex;
+      position: relative;
+      max-width: 240px;
+      height: 165px;
+      background-color: #424242;
+      -webkit-clip-path: polygon(
+        50% 0%,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        0% 75%,
+        0% 25%
+      );
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+  }
+  @media (max-width: 640px) {
+    .hexagon-gallery {
+      margin: auto;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-auto-rows: 90px;
+      grid-gap: 21px;
+    }
+  
+    .hex {
+      display: flex;
+      position: relative;
+      max-width: 240px;
+      height: 110px;
+      background-color: #424242;
+      -webkit-clip-path: polygon(
+        50% 0%,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        0% 75%,
+        0% 25%
+      );
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+  }
+  @media (max-width: 520px) {
+    .hexagon-gallery {
+      margin: auto;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-auto-rows: 74px;
+      grid-gap: 6px;
+    }
+  
+    .hex {
+      display: flex;
+      position: relative;
+      max-width: 240px;
+      height: 98px;
+      background-color: #424242;
+      -webkit-clip-path: polygon(
+        50% 0%,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        0% 75%,
+        0% 25%
+      );
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+  }
+  @media (max-width: 450px) {
+    .hexagon-gallery {
+      margin: auto;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-auto-rows: 74px;
+      grid-gap: 6px;
+    }
+  
+    .hex {
+      display: flex;
+      position: relative;
+      max-width: 240px;
+      height: 98px;
+      background-color: #424242;
+      -webkit-clip-path: polygon(
+        50% 0%,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        0% 75%,
+        0% 25%
+      );
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+  }
+  
+  
 
-.hexagon-gallery {
-  margin: auto;
-  margin-top: 30px;
-  max-width: 1000px;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-auto-rows: 200px;
-  grid-gap: 14px;
-  padding-bottom: 50px;
-}
-
-.hex {
-  display: flex;
-  position: relative;
-  width: 240px;
-  height: 265px;
-  background-color: #424242;
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  transition: all .3s;
-  cursor: pointer;
-}
-.hex:hover{
-  transform: scale(1.05);
-}
-.hex:hover img{
-  transform: scale(1.1);
-}
-
-.hex:first-child {
-  grid-row-start: 1;
-  grid-column: 2 / span 2;
-}
-
-.hex:nth-child(2) {
-  grid-row-start: 1;
-  grid-column: 4 / span 2;
-}
-
-.hex:nth-child(3) {
-  grid-row-start: 1;
-  grid-column: 6 / span 2;
-}
-
-.hex:nth-child(4) {
-  grid-row-start: 2;
-  grid-column: 1 / span 2;
-}
-
-.hex:nth-child(5) {
-  grid-row-start: 2;
-  grid-column: 3 / span 2;
-}
-
-.hex:nth-child(6) {
-  grid-row-start: 2;
-  grid-column: 5 / span 2;
-}
-
-.hex:nth-child(7) {
-  grid-row-start: 2;
-  grid-column: 7 / span 2;
-}
-
-.hex:nth-child(8) {
-  grid-row-start: 3;
-  grid-column: 2 / span 2;
-}
-
-.hex:nth-child(9) {
-  grid-row-start: 3;
-  grid-column: 4 / span 2;
-}
-
-.hex:nth-child(10) {
-  grid-row-start: 3;
-  grid-column: 6 / span 2;
-}

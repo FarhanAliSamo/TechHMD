@@ -1,48 +1,66 @@
+"use client";
+
 import Button from '@/components/atoms/button'
-import React from 'react'
+import { getHomeAbout, getHomeAboutCounter } from '@/lib/api/home';
+import React, { useEffect, useState } from "react";
+
 
 const AboutSection = () => {
+
+    const [data, setData] = useState< HomeAbout | null >(null);
+    const [counterData, setCounterData] = useState< HomeCounters[] | null >(null);
+    
+    
+    const getCounters = async () => {
+        const {
+          data: { data },
+        } = await getHomeAboutCounter();
+        setCounterData(data)
+    };
+
+    const getHomeData = async () => {
+      const {
+        data: { data },
+      } = await getHomeAbout();
+
+      setData(data);
+      console.log(data)
+    };
+
+    useEffect(() => {
+        getHomeData(); 
+        getCounters();
+    }, []);
+
+
   return (
-    <div className='grid grid-cols-12 h-screen w-full px-[120px] gap-6 items-center justify-center ' >
+    <div className='grid grid-cols-12 min-h-screen w-full lg:px-[120px] md:px-[80px] sm:px-[40px] px-[20px]  sm:gap-6 gap-0 sm:mb-0 mb-10  items-center justify-center ' >
 
-        <div className="col-span-7">
+        <div className="sm:col-span-7 col-span-12 sm:mt-0 mt-10">
             
-            <h3 className='mb-3 text-2xl'>Empowering Enterprises</h3>
-            <h1 className='text-6xl text-slate-900 font-bold uppercase'>Conquer the world with us</h1>
+            <h3 className='lg:mb-3 sm:mb-2 mb-1 lg:text-2xl md:text-xl sm:text-lg text-sm '>Empowering Enterprises</h3>
+            <h1 className='lg:text-6xl  md:text-4xl text-xl  text-slate-900 font-bold uppercase about_heading'>{data?.heading}</h1>
             
-            <p className='text-sm my-3'>We are dedicated to guiding you to navigate through the digital realm 
-            in order to grow your business from the introduction phase to th
-            We envision driving positive outcomes by allocating our expertise and
-            tech solutions. Our detailed and strategic approach allows us to deliver a
-            distinctive user experience. Let’s touch the horizons with digitalization.</p>
+            <p className='md:text-sm text-xs  sm:my-3 my-1 mt-2'>{data?.description}</p>
 
-            <Button className="bg-transparent backdrop-blur-md text-slate-800 mt-4 hover:bg-[#3A3B62] hover:text-white border-black hover:border-[#3A3B62]" title="Learn More"/>
+            <Button className="bg-[#3A3B62] backdrop-blur-md mt-4 hover:bg-transparent hover:text-[#3A3B62] border  border-[#3A3B62] text-white" title="Learn More"/>
         </div>
 
-        <div className="col-span-5">
+        <div className="sm:col-span-5 col-span-12 ">
         
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 lg:gap-4 gap-3  ">  
 
-                <div className="col-span-1 flex flex-col items-center justify-center gap-2 border-2 border-slate-800 rounded-sm min-h-[150px]">
-                    <h3 className='text-4xl font-semibold'>30+</h3>
-                    <p className='text-sm font-medium'>Countries Served</p>
-                </div>
-                
-
-                <div className="col-span-1 flex flex-col items-center justify-center gap-2 border-2 border-slate-800 rounded-sm min-h-[150px]">
-                    <h3 className='text-4xl font-semibold'>90+</h3>
-                    <p className='text-sm font-medium'>Countries Served</p>
-                </div>
-
-                <div className="col-span-1 flex flex-col items-center justify-center gap-2 border-2 border-slate-800 rounded-sm min-h-[150px]">
-                    <h3 className='text-4xl font-semibold'>50+</h3>
-                    <p className='text-sm font-medium'>Countries Served</p>
-                </div>
-
-                <div className="col-span-1 flex flex-col items-center justify-center gap-2 border-2 border-slate-800 rounded-sm min-h-[150px]">
-                    <h3 className='text-4xl font-semibold'>80+</h3>
-                    <p className='text-sm font-medium'>Countries Served</p>
-                </div>
+            {counterData?.map((counter) => (
+                        <div
+                            key={counter.id}
+                            id={`counter-${counter.id}`}
+                            className="col-span-1 flex flex-col items-center justify-center gap-2 border-2 border-slate-800 rounded-sm lg:min-h-[150px] md:min-h-[140px] min-h-[120px]"
+                        >
+                            <h3 className="lg:text-4xl md:text-3xl text-xl sm:font-semibold font-medium">{counter.number} </h3>
+                            <p className="lg:text-sm text-xs font-medium">{counter.title}</p>
+                        </div>
+                    ))}
+ 
 
             </div>
 

@@ -4,47 +4,48 @@ import { Icon } from "@iconify/react";
 const Footer = () => {
   return (
     <>
-    <div className="bg-[#3a3b62] w-full px-[120px]  py-[50px]">
-      <div className="grid grid-cols-12 gap-5">
-        <div className="col-span-5">
-          <div className="flex gap-5 items-center justify-center h-full ">
+    <div className="bg-[#3a3b62] w-full lg:px-[150px] md:px-[80px]  md:py-[50px] sm:py-[40px] px-[20px]">
+      <div className="grid grid-cols-12 gap-5 gap-y-8 ">
+        <div className="lg:col-span-5 col-span-12 ">
+          <div className="flex sm:gap-5 gap-2 items-center justify-center max-sm:flex-col max-sm:text-center h-full ">
             <img
               src="/assets/images/logos/logo-footer.png"
               alt=""
-              className="h-[150px]"
+              className="lg:h-[150px] md:h-[120px] sm:h-[100px] h-[80px] "
             />
 
-            <div className="text-white text-opacity-90 py-2">
-              <p className="text-sm">
+            <div className="text-white text-opacity-90 py-2 ">
+              <p className="lg:text-sm text-xs">
                 Intersys Limited persistently adds value to your projects and
                 establishes a digital presence with the integration of
                 innovative solutions. We design and build software-integrated
                 solutions, including data-driven strategies and UI/UX designs.
               </p>
 
-              <div className="flex items-center gap-2 mt-3">
+              <div className="flex items-center max-sm:justify-center gap-2 mt-3">
                 <Icon
                   icon="mdi:instagram"
-                  className="text-2xl hover:text-opacity-100 cursor-pointer transition-all hover:scale-110"
+                  className="lg:text-2xl md:text-xl text-lg  hover:text-opacity-100 cursor-pointer transition-all hover:scale-110"
                 />
                 <Icon
                   icon="mdi:linkedin"
-                  className="text-2xl hover:text-opacity-100 cursor-pointer transition-all hover:scale-110"
+                  className="lg:text-2xl md:text-xl text-lg  hover:text-opacity-100 cursor-pointer transition-all hover:scale-110"
                 />
                 <Icon
                   icon="ic:baseline-facebook"
-                  className="text-2xl hover:text-opacity-100 cursor-pointer transition-all hover:scale-110"
+                  className="lg:text-2xl md:text-xl text-lg  hover:text-opacity-100 cursor-pointer transition-all hover:scale-110"
                 />
               </div>
             </div>
+
           </div>
         </div>
 
-        <div className="col-span-2">
-          <h3 className="text-white  font-semibold uppercase text-lg mb-3 ps-2">
+        <div className="lg:col-span-2 md:col-span-4 col-span-6">
+          <h3 className="text-white  font-semibold uppercase lg:text-lg md:text-base text-sm sm:mb-3 mb-2 ps-2">
             Quick Links
           </h3>
-          <ul className="flex flex-col text-white text-sm gap-2">
+          <ul className="flex flex-col text-white lg:text-sm text-xs  gap-2">
             <li>
               <a
                 href="#"
@@ -53,7 +54,7 @@ const Footer = () => {
                 {" "}
                 <Icon
                   icon="eva:arrow-right-fill"
-                  className="text-xl mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
+                  className="lg:text-xl md:text-lg text-base mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
                 />{" "}
                 Home
               </a>
@@ -66,7 +67,7 @@ const Footer = () => {
                 {" "}
                 <Icon
                   icon="eva:arrow-right-fill"
-                  className="text-xl mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
+                  className="lg:text-xl md:text-lg text-base mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
                 />{" "}
                 About us{" "}
               </a>
@@ -79,7 +80,7 @@ const Footer = () => {
                 {" "}
                 <Icon
                   icon="eva:arrow-right-fill"
-                  className="text-xl mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
+                  className="lg:text-xl md:text-lg text-base mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
                 />{" "}
                 Portfolio
               </a>
@@ -92,7 +93,7 @@ const Footer = () => {
                 {" "}
                 <Icon
                   icon="eva:arrow-right-fill"
-                  className="text-xl mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
+                  className="lg:text-xl md:text-lg text-base mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
                 />{" "}
                 Services
               </a>
@@ -105,7 +106,7 @@ const Footer = () => {
                 {" "}
                 <Icon
                   icon="eva:arrow-right-fill"
-                  className="text-xl mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
+                  className="lg:text-xl md:text-lg text-base mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
                 />{" "}
                 Blog
               </a>
@@ -118,7 +119,7 @@ const Footer = () => {
                 {" "}
                 <Icon
                   icon="eva:arrow-right-fill"
-                  className="text-xl mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
+                  className="lg:text-xl md:text-lg text-base mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
                 />{" "}
                 Contact Us
               </a>
@@ -126,11 +127,11 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="col-span-2">
-          <h3 className="text-white  font-semibold uppercase text-lg mb-3 ps-2">
+        <div className="lg:col-span-2 md:col-span-4 col-span-6">
+          <h3 className="text-white  font-semibold uppercase lg:text-lg md:text-base text-sm sm:mb-3 mb-2 ps-2">
             Services
           </h3>
-          <ul className="flex flex-col text-white text-sm gap-2">
+          <ul className="flex flex-col text-white lg:text-sm text-xs gap-2">
             <li>
               <a
                 href="#"
@@ -139,7 +140,7 @@ const Footer = () => {
                 {" "}
                 <Icon
                   icon="eva:arrow-right-fill"
-                  className="text-xl mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
+                  className="lg:text-xl md:text-lg text-base mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
                 />{" "}
                 Artificial Intelligence{" "}
               </a>
@@ -152,7 +153,7 @@ const Footer = () => {
                 {" "}
                 <Icon
                   icon="eva:arrow-right-fill"
-                  className="text-xl mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
+                  className="lg:text-xl md:text-lg text-base mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
                 />{" "}
                 Machine Learning{" "}
               </a>
@@ -165,7 +166,7 @@ const Footer = () => {
                 {" "}
                 <Icon
                   icon="eva:arrow-right-fill"
-                  className="text-xl mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
+                  className="lg:text-xl md:text-lg text-base mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
                 />{" "}
                 Graphic Design
               </a>
@@ -178,7 +179,7 @@ const Footer = () => {
                 {" "}
                 <Icon
                   icon="eva:arrow-right-fill"
-                  className="text-xl mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
+                  className="lg:text-xl md:text-lg text-base mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
                 />{" "}
                 Digital Marketing{" "}
               </a>
@@ -191,7 +192,7 @@ const Footer = () => {
                 {" "}
                 <Icon
                   icon="eva:arrow-right-fill"
-                  className="text-xl mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
+                  className="lg:text-xl md:text-lg text-base mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
                 />{" "}
                 App Development{" "}
               </a>
@@ -205,7 +206,7 @@ const Footer = () => {
                 {" "}
                 <Icon
                   icon="eva:arrow-right-fill"
-                  className="text-xl mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
+                  className="lg:text-xl md:text-lg text-base mr-1 group-hover:translate-x-1 group-hover:text-white transition-all text-[#7d7ec6] "
                 />{" "}
                 Web Development{" "}
               </a>
@@ -213,11 +214,11 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="col-span-3">
-          <h3 className="text-white  font-semibold uppercase text-lg mb-3 ps-2">
+        <div className="lg:col-span-3 md:col-span-4 col-span-12">
+          <h3 className="text-white  font-semibold uppercase lg:text-lg md:text-base text-sm sm:mb-3 mb-2 ps-2">
             Get In Touch
           </h3>
-          <ul className="flex flex-col text-white text-sm gap-2">
+          <ul className="flex flex-col text-white lg:text-sm text-xs gap-2">
             <li>
               <a
                 href="#"
@@ -225,7 +226,7 @@ const Footer = () => {
               >
                 <Icon
                   icon="ic:baseline-call"
-                  className="text-xl mr-2 group-hover:translate-x-1 group-hover:text-white transition-all   "
+                  className="lg:text-xl text-lg mr-2 group-hover:translate-x-1 group-hover:text-white transition-all   "
                 />
                 +92 3131112456
               </a>
@@ -238,7 +239,7 @@ const Footer = () => {
               >
                 <Icon
                   icon="material-symbols:mail"
-                  className="text-xl mr-2 group-hover:translate-x-1 group-hover:text-white transition-all   "
+                  className="lg:text-xl text-lg mr-2 group-hover:translate-x-1 group-hover:text-white transition-all   "
                 />
                 info@techhmd.com
               </a>
@@ -264,12 +265,12 @@ const Footer = () => {
         </div>
       </div>
     </div>
-    <div className="bg-[#31315b] w-full h-[50px] px-[120px] text-white flex items-center justify-between">
-      <p className="text-sm">Copyright © 2025. Tech HMD  Private Limited.</p>
-      <div className="flex gap-3 items-center ">
-        <a href="#" className=" text-sm hover:text-slate-400 transition-all">Terms & Condition </a>
-        <a href="#" className=" text-sm hover:text-slate-400 transition-all"> Privacy Policy  </a>
-        <a href="#" className=" text-sm hover:text-slate-400 transition-all">Refund Policy </a>
+    <div className="bg-[#31315b] w-full md:h-[50px] max-md:py-[15px] max-md:pt-[20px]  lg:px-[150px] md:px-[80px]     text-white flex items-center md:justify-between justify-center gap-1.5 max-md:flex-col">
+      <p className="lg:text-sm text-xs">Copyright © 2025. Tech HMD  Private Limited.</p>
+      <div className="flex sm:gap-3 gap-2 items-center ">
+        <a href="#" className=" lg:text-sm text-xs hover:text-slate-400 transition-all">Terms & Condition </a>
+        <a href="#" className=" lg:text-sm text-xs hover:text-slate-400 transition-all"> Privacy Policy  </a>
+        <a href="#" className=" lg:text-sm text-xs hover:text-slate-400 transition-all">Refund Policy </a>
       </div>
     </div>
     </>

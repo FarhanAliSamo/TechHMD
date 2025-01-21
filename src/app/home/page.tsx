@@ -18,9 +18,10 @@ const Home = () => {
   console.log(test)
   return (
     <div>
+      
       <Hero/>
       <AboutSection/>
-      <MultiColorSepartor  />
+      <MultiColorSepartor  className='relative top-[18px]' />
       <ServiceSection/>
       <PortfolioSection/>
       <PrimaryBanner/>
