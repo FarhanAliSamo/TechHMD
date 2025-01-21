@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import {
   Select,
@@ -15,22 +15,25 @@ import { Icon } from "@iconify/react";
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
-  let lastScrollY = window.scrollY;
+  const lastScrollY = useRef(0);
 
   const handleScroll = () => {
-    if (window.scrollY > lastScrollY) {
+    if (window.scrollY > lastScrollY.current) {
       setShowHeader(false);
     } else {
       setShowHeader(true);
     }
-    lastScrollY = window.scrollY;
+    lastScrollY.current = window.scrollY;
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    if (typeof window !== 'undefined') {
+      lastScrollY.current = window.scrollY;
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
   }, []);
 
   return (
